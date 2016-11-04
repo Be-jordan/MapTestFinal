@@ -1,20 +1,25 @@
 ﻿<Properties StartupConfiguration="{66A0D3DA-8581-436B-AA02-E26B7D807BBE}|Default">
   <MonoDevelop.Ide.ItemProperties.TrackMap.Touch PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.3CBCA3CE-B7A5-4B83-80F0-3520610D90C3" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="TrackMap.Touch/Setup.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="TrackMap.Touch/Main.cs">
     <Files>
       <File FileName="TrackMap.Core/MyClass.cs" Line="1" Column="1" />
-      <File FileName="TrackMap.Touch/AppDelegate.cs" Line="1" Column="1" />
+      <File FileName="TrackMap.Touch/AppDelegate.cs" Line="24" Column="23" />
       <File FileName="TrackMap.Touch/Views/SecondView.cs" Line="42" Column="4" />
-      <File FileName="TrackMap.Touch/Views/FirstView.cs" Line="1" Column="1" />
+      <File FileName="TrackMap.Touch/Views/FirstView.cs" Line="18" Column="4" />
       <File FileName="TrackMap.Core/ViewModels/SecondViewModel.cs" Line="8" Column="2" />
-      <File FileName="TrackMap.Core/ViewModels/FirstViewModel.cs" Line="1" Column="1" />
-      <File FileName="TrackMap.Core/App.cs" Line="1" Column="1" />
-      <File FileName="TrackMap.Touch/Setup.cs" Line="27" Column="10" />
+      <File FileName="TrackMap.Core/ViewModels/FirstViewModel.cs" Line="16" Column="20" />
+      <File FileName="TrackMap.Core/App.cs" Line="16" Column="39" />
+      <File FileName="TrackMap.Touch/Setup.cs" Line="26" Column="39" />
       <File FileName="TrackMap.Touch/ViewController.cs" Line="17" Column="14" />
-      <File FileName="TrackMap.Touch/Views/FirstView.designer.cs" Line="38" Column="1" />
+      <File FileName="TrackMap.Touch/Views/FirstView.designer.cs" Line="16" Column="6" />
       <File FileName="TrackMap.Touch/Info.plist" />
       <File FileName="TrackMap.Touch/ToDo-MvvmCross/_ iOS UI.txt" Line="1" Column="1" />
       <File FileName="TrackMap.Touch/AppDelegate.cs.txt" Line="1" Column="1" />
+      <File FileName="TrackMap.Core/IDependenciesRegister.cs" Line="7" Column="2" />
+      <File FileName="TrackMap.Core/DependenciesRegister.cs" Line="11" Column="4" />
+      <File FileName="TrackMap.Core/Services/AppTranslation.cs" Line="4" Column="29" />
+      <File FileName="TrackMap.Core/Services/IAppTranslation.cs" Line="9" Column="1" />
+      <File FileName="TrackMap.Touch/Main.cs" Line="12" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

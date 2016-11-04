@@ -1,9 +1,17 @@
 ﻿using System;
+using TrackMap.Touch;
+
 namespace TrackMap.Core
 {
-	public class DependenciesRegister
+	public class DependenciesRegister : IDependenciesRegister
 	{
-		public DependenciesRegister()
+		protected DependenciesRegister(AppTranslation appTranslation)
+		{
+			AppTranslation = appTranslation;
+		}
+
+		protected AppTranslation AppTranslation { get; }
+		public virtual void RegisterCommon()
 		{
 		}
 	}

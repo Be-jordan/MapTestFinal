@@ -31,6 +31,10 @@
     <Compile Include="ViewModels\FirstViewModel.cs" />
     <Compile Include="App.cs" />
     <Compile Include="ViewModels\SecondViewModel.cs" />
+    <Compile Include="IDependenciesRegister.cs" />
+    <Compile Include="DependenciesRegister.cs" />
+    <Compile Include="Services\AppTranslation.cs" />
+    <Compile Include="Services\IAppTranslation.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -48,6 +52,9 @@
     <Reference Include="MvvmCross.Localization">
       <HintPath>..\packages\MvvmCross.Binding.4.4.0\lib\portable-net45+win+wpa81+wp80\MvvmCross.Localization.dll</HintPath>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
 </Project>

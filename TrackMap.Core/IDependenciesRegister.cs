@@ -1,10 +1,7 @@
-﻿using System;
-namespace TrackMap.Core
+﻿namespace TrackMap.Touch
 {
-	public class IDependenciesRegister
+	public interface IDependenciesRegister
 	{
-		public IDependenciesRegister()
-		{
-		}
+		void RegisterCommon();
 	}
 }
