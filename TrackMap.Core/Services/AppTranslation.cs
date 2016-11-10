@@ -3,9 +3,9 @@ namespace TrackMap.Core
 {
 	public class AppTranslation : IAppTranslation
 	{
-		public double TipAmount(double subTotal, double generosity)
+		public string Request()
 		{
-			return subTotal * generosity / 100.0;
+			return "Welcome!";
 		}
 	}
 }

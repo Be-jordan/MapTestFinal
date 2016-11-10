@@ -1,10 +1,12 @@
 ﻿using System;
 namespace TrackMap.Core
 {
-	public class TipService
+	public class TipService : ITipService
 	{
-		public TipService()
+		public double Calc(double subTotal, int generosity)
 		{
+			return subTotal * generosity / 100.0;
 		}
+
 	}
 }

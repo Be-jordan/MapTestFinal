@@ -2,8 +2,7 @@
 namespace TrackMap.Core
 {
 	public interface IAppTranslation
-		{
-			double TipAmount(double subTotal, double generosity);
-		}
+	{
+		string Request();
 	}
-
+}

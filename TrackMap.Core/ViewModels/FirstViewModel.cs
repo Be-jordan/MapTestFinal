@@ -6,6 +6,39 @@ namespace TrackMap.Core.ViewModels
 	public class FirstViewModel
 		: MvxViewModel
 	{
+		//private readonly ITipService _tipService;
+
+		//public FirstViewModel(ITipService tipSerive)
+		//{
+		//	_tipService = tipSerive;
+		//}
+
+		//private double _subtotal;
+		//public double Subtotal
+		//{ 
+		//	get { return _subtotal; }
+		//	set { _subtotal = value; RaisePropertyChanged(() => Subtotal); Update(); }
+		//}
+		//private int _generosity;
+		//public int Generosity
+		//{ 
+		//	get { return _generosity;}
+		//	set { _generosity = value; RaisePropertyChanged(() => Generosity); Update();}
+		//}
+		//void Update()
+		//{
+		//	Tip = _tipService.Calc(Subtotal, Generosity);
+		//}
+
+		//private double _tip;
+		//public double Tip
+		//{
+		//	get { return _tip; }
+		//	set { _tip = value; RaisePropertyChanged(() => Tip); }
+		//}
+
+
+
 		private readonly IAppTranslation _appTranslation;
 		public FirstViewModel(IAppTranslation appTranslation)
 		{
@@ -13,59 +46,27 @@ namespace TrackMap.Core.ViewModels
 		}
 		public override void Start()
 		{
-			_subTotal = 100;
-			_generosity = 10;
-			Recalcuate();
+			Recalculate();
 			base.Start();
 		}
-		double _subTotal;
 
-		public double SubTotal
+		string _request;
+
+		public string Request
 		{
-			get { return _subTotal; }
+			get { return _request; }
 			set
 			{
-				_subTotal = value;
-				RaisePropertyChanged(() => SubTotal);
-				Recalcuate();
-			}
-		}
-		int _generosity;
-
-		public int Generosity
-		{
-			get { return _generosity; }
-			set
-			{
-				_generosity = value;
-				RaisePropertyChanged(() => Generosity);
-				Recalcuate();
-			}
-		}
-		double _tip;
-
-		public double Tip
-		{
-			get { return _tip; }
-			set
-			{
-				_tip = value;
-				RaisePropertyChanged(() => Tip);
+				_request = value;
+				RaisePropertyChanged(() => Request);
 			}
 		}
 
-		private double _total;
-		public double Total
+		void Recalculate()
 		{
-			get { return _total; }
-			set { _total = value; RaisePropertyChanged(() => Total); }
-		}
-		void Recalcuate()
-		{
-			Tip = _appTranslation.TipAmount(SubTotal, Generosity);
-			Total = SubTotal + Tip;
-		}
+			Request = _appTranslation.Request();
 
+		}
 		private MvvmCross.Core.ViewModels.MvxCommand _goSecondCommand;
 		public System.Windows.Input.ICommand GoSecondCommand
 		{
@@ -81,7 +82,5 @@ namespace TrackMap.Core.ViewModels
 		{
 			base.ShowViewModel<SecondViewModel>();
 		}
-
 	}
 }
-
