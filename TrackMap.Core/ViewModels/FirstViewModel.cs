@@ -6,43 +6,41 @@ namespace TrackMap.Core.ViewModels
 	public class FirstViewModel
 		: MvxViewModel
 	{
-		//private readonly ITipService _tipService;
-
-		//public FirstViewModel(ITipService tipSerive)
-		//{
-		//	_tipService = tipSerive;
-		//}
-
-		//private double _subtotal;
-		//public double Subtotal
-		//{ 
-		//	get { return _subtotal; }
-		//	set { _subtotal = value; RaisePropertyChanged(() => Subtotal); Update(); }
-		//}
-		//private int _generosity;
-		//public int Generosity
-		//{ 
-		//	get { return _generosity;}
-		//	set { _generosity = value; RaisePropertyChanged(() => Generosity); Update();}
-		//}
-		//void Update()
-		//{
-		//	Tip = _tipService.Calc(Subtotal, Generosity);
-		//}
-
-		//private double _tip;
-		//public double Tip
-		//{
-		//	get { return _tip; }
-		//	set { _tip = value; RaisePropertyChanged(() => Tip); }
-		//}
-
-
+		private readonly ITipService _tipService;
 
 		private readonly IAppTranslation _appTranslation;
 		public FirstViewModel(IAppTranslation appTranslation)
 		{
 			_appTranslation = appTranslation;
+		}
+
+		public FirstViewModel(ITipService tipSerive)
+		{
+			_tipService = tipSerive;
+		}
+
+		private double _subtotal;
+		public double Subtotal
+		{
+			get { return _subtotal; }
+			set { _subtotal = value; RaisePropertyChanged(() => Subtotal); Update(); }
+		}
+		private int _generosity;
+		public int Generosity
+		{
+			get { return _generosity; }
+			set { _generosity = value; RaisePropertyChanged(() => Generosity); Update(); }
+		}
+		void Update()
+		{
+			Tip = _tipService.Calc(Subtotal, Generosity);
+		}
+
+		private double _tip;
+		public double Tip
+		{
+			get { return _tip; }
+			set { _tip = value; RaisePropertyChanged(() => Tip); }
 		}
 		public override void Start()
 		{

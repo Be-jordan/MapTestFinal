@@ -64,7 +64,6 @@ namespace TrackMap.Core.Touch.Views
 			CreateRoute();
 		}
 
-
 		private void CreateRoute()
 		{
 			map.AutoresizingMask = UIViewAutoresizing.FlexibleDimensions;
