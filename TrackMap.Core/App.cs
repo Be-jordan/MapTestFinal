@@ -7,11 +7,13 @@ namespace TrackMap.Core
 {
     public class App : MvxApplication
 	{
-	                            	public App()
-	{
-		Mvx.RegisterType<IAppTranslation, AppTranslation>();
-		Mvx.RegisterSingleton<IMvxAppStart>(new MvxAppStart<FirstViewModel>());
-	}
+		public App()
+		{
+			var dr = new DependenciesRegister();
+			dr.RegisterCommon();
+
+			Mvx.RegisterSingleton<IMvxAppStart>(new MvxAppStart<FirstViewModel>());
+		}
     
         public override void Initialize()
         {
